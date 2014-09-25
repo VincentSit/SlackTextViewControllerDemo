@@ -15,6 +15,8 @@
 		45E86F2B19D40EC4004F0C93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E86F2A19D40EC4004F0C93 /* Images.xcassets */; };
 		45E86F2E19D40EC4004F0C93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45E86F2C19D40EC4004F0C93 /* LaunchScreen.xib */; };
 		45E86F3A19D40EC4004F0C93 /* SlackTextViewControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E86F3919D40EC4004F0C93 /* SlackTextViewControllerDemoTests.m */; };
+		45E86F4519D40F90004F0C93 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E86F4419D40F90004F0C93 /* MessageViewController.m */; };
+		77D1D27CD495406982891349 /* libPods-SlackTextViewControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B01B772A9F42BC8F7946B5 /* libPods-SlackTextViewControllerDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		45E86F3319D40EC4004F0C93 /* SlackTextViewControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackTextViewControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E86F3819D40EC4004F0C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45E86F3919D40EC4004F0C93 /* SlackTextViewControllerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlackTextViewControllerDemoTests.m; sourceTree = "<group>"; };
+		45E86F4319D40F90004F0C93 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		45E86F4419D40F90004F0C93 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		63B01B772A9F42BC8F7946B5 /* libPods-SlackTextViewControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SlackTextViewControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8161E05AEA49C98B52939F /* Pods-SlackTextViewControllerDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackTextViewControllerDemo.xcconfig"; path = "Pods/Pods-SlackTextViewControllerDemo.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D1D27CD495406982891349 /* libPods-SlackTextViewControllerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +76,8 @@
 				45E86F1919D40EC4004F0C93 /* SlackTextViewControllerDemo */,
 				45E86F3619D40EC4004F0C93 /* SlackTextViewControllerDemoTests */,
 				45E86F1819D40EC4004F0C93 /* Products */,
+				9D8161E05AEA49C98B52939F /* Pods-SlackTextViewControllerDemo.xcconfig */,
+				573C03C625E148CFAF0BA402 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +99,8 @@
 				45E86F2219D40EC4004F0C93 /* FirstViewController.m */,
 				45E86F2419D40EC4004F0C93 /* SecondViewController.h */,
 				45E86F2519D40EC4004F0C93 /* SecondViewController.m */,
+				45E86F4319D40F90004F0C93 /* MessageViewController.h */,
+				45E86F4419D40F90004F0C93 /* MessageViewController.m */,
 				45E86F2719D40EC4004F0C93 /* Main.storyboard */,
 				45E86F2A19D40EC4004F0C93 /* Images.xcassets */,
 				45E86F2C19D40EC4004F0C93 /* LaunchScreen.xib */,
@@ -124,6 +135,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		573C03C625E148CFAF0BA402 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63B01B772A9F42BC8F7946B5 /* libPods-SlackTextViewControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45E86F3D19D40EC4004F0C93 /* Build configuration list for PBXNativeTarget "SlackTextViewControllerDemo" */;
 			buildPhases = (
+				CFF8DD5078B14C4C9EEA4942 /* Check Pods Manifest.lock */,
 				45E86F1319D40EC4004F0C93 /* Sources */,
 				45E86F1419D40EC4004F0C93 /* Frameworks */,
 				45E86F1519D40EC4004F0C93 /* Resources */,
+				390BC3F2B277445082C22D4E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,12 +240,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		390BC3F2B277445082C22D4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SlackTextViewControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFF8DD5078B14C4C9EEA4942 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45E86F1319D40EC4004F0C93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				45E86F2619D40EC4004F0C93 /* SecondViewController.m in Sources */,
+				45E86F4519D40F90004F0C93 /* MessageViewController.m in Sources */,
 				45E86F2019D40EC4004F0C93 /* AppDelegate.m in Sources */,
 				45E86F2319D40EC4004F0C93 /* FirstViewController.m in Sources */,
 				45E86F1D19D40EC4004F0C93 /* main.m in Sources */,
@@ -303,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -338,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -347,8 +402,10 @@
 		};
 		45E86F3E19D40EC4004F0C93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D8161E05AEA49C98B52939F /* Pods-SlackTextViewControllerDemo.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SlackTextViewControllerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,8 +414,10 @@
 		};
 		45E86F3F19D40EC4004F0C93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D8161E05AEA49C98B52939F /* Pods-SlackTextViewControllerDemo.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = SlackTextViewControllerDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +477,7 @@
 				45E86F3F19D40EC4004F0C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45E86F4019D40EC4004F0C93 /* Build configuration list for PBXNativeTarget "SlackTextViewControllerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +486,7 @@
 				45E86F4219D40EC4004F0C93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

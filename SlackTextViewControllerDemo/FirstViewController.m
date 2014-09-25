@@ -8,20 +8,23 @@
 
 #import "FirstViewController.h"
 
-@interface FirstViewController ()
-
-@end
+#import "MessageViewController.h"
 
 @implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    [button setFrame:CGRectMake(100, 100, 60, 60)];
+    [button addTarget:self action:@selector(pushToMessageViewController) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)pushToMessageViewController {
+    MessageViewController *messageViewController = [[MessageViewController alloc] init];
+    [self.navigationController pushViewController:messageViewController animated:YES];
 }
 
 @end

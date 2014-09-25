@@ -1,0 +1,19 @@
+PODS:
+  - SlackTextViewController (1.0):
+    - SlackTextViewController/Additions
+    - SlackTextViewController/Additions
+  - SlackTextViewController/Additions (1.0):
+    - SlackTextViewController/Additions
+
+DEPENDENCIES:
+  - SlackTextViewController (from `git@github.com:slackhq/SlackTextViewController.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  SlackTextViewController:
+    :branch: master
+    :git: git@github.com:slackhq/SlackTextViewController.git
+
+SPEC CHECKSUMS:
+  SlackTextViewController: 58a83eccacba8cff2ab2c7fded49f91812bd6a8d
+
+COCOAPODS: 0.33.1
